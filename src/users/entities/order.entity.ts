@@ -33,6 +33,6 @@ export class Order {
   @OneToMany(() => OrderItem, (item) => item.order)
   items: OrderItem[];
 
-  @Column({ type: 'int' })
+  @Column({ type: 'numeric', nullable: true })
   total: number;
 }
